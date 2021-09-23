@@ -6,4 +6,4 @@ Conforme sigo o curso, atualizarei este repositório com aprendizados práticos 
 
 ### Repositórios:
 
-1. Livro de Receitas (Introdução ao Git/Github).
+1. https://github.com/RodrigoIde42/livro-receitas.git (Introdução ao Git/Github).
