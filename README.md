@@ -1,6 +1,6 @@
 # Desafios de Projetos - DIO 🚶
 
-Criando meu primeiro repositório no GitHub, para melhor compreensão sobre Git/Github. 📖
+Criando meu primeiro repositório no GitHub, para melhor compreensão sobre Git/Github.
 Conforme sigo o curso, atualizarei este repositório com aprendizados práticos dos cursos.
 
 
