@@ -32,7 +32,7 @@ input.addEventListener('input', (event) => {
     const i = event.currentTarget as HTMLInputElement;
     console.log(i.value);
 });
-*/
+
 
 // Generic types
 
@@ -41,3 +41,21 @@ function adicionaApendiceALista<T>(array: T[], valor: T){
 }
 
 adicionaApendiceALista(['A', 'B ', 'C'], 'D');
+*/
+
+interface IUsuario {
+    id: string;
+    email: string;
+}
+
+interface IAdmin extends IUsuario{
+    cargo: 'gerente' | 'coordenador' | 'supervisor';
+}
+
+function redirecione(usuario: IUsuario | IAdmin) {
+    if ('cargo' in usuario){
+        // redirecionar para área de administração
+    }
+
+    // redirecionar para área de usuário
+}
