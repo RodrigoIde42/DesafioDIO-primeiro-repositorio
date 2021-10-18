@@ -23,3 +23,31 @@ body {
   width: 700px;
   height: 700px;
 }
+
+.green {
+  grid-area: green;
+  background-color: rgb(45, 168, 21);
+  border-top-left-radius: 100%;
+}
+
+.red {
+  grid-area: red;
+  background-color: rgb(161, 41, 20);
+  border-top-right-radius: 100%;
+}
+
+.yellow {
+  grid-area: yellow;
+  background-color: rgb(212, 170, 32);
+  border-bottom-left-radius: 100%;
+}
+
+.blue {
+  grid-area: blue;
+  background-color: rgb(40, 109, 212);
+  border-bottom-right-radius: 100%;
+}
+
+.selected {
+  opacity: 0.5;
+}
