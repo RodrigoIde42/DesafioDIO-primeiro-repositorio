@@ -86,3 +86,15 @@ const cao = new MeuCachorro('Apolo', 14);
 
 console.log(cao)
 */
+
+// Importando bibliotecas com Typescript
+
+import $ from 'jquery';
+
+$.fn.extend({
+    novaFuncao() {
+        console.log("Chamou nova função!!");
+    }
+});
+
+$('body').novaFuncao();
