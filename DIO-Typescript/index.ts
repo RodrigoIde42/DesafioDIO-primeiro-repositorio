@@ -41,7 +41,8 @@ function adicionaApendiceALista<T>(array: T[], valor: T){
 }
 
 adicionaApendiceALista(['A', 'B ', 'C'], 'D');
-*/
+
+// Condicionais a partir de parâmetros e '?' para variáveis opcionais
 
 interface IUsuario {
     id: string;
@@ -56,3 +57,32 @@ function redirecione(usuario: IUsuario) {
 
     // redirecionar para área de usuário
 }
+
+// Criando variaveis com propriedade readonly e private
+
+interface ICachorro {
+    nome: string;
+    idade: number;
+    parqueFavorito?: string;
+}
+
+type ICachorroReadOnly = {
+    +readonly [K in keyof ICachorro]-?: ICachorro[K];
+}
+
+class MeuCachorro implements ICachorroReadOnly{
+    readonly idade;
+    readonly nome;
+    readonly parqueFavorito;
+
+    constructor(nome, idade) {
+        this.idade = idade;
+        this.nome = nome;
+    }
+}
+
+const cao = new MeuCachorro('Apolo', 14);
+//cao.idade = 8; Cannot assign to 'idade' because it is a read-only property.
+
+console.log(cao)
+*/
