@@ -23,7 +23,8 @@ const animal: IDomestico = {
     tipo: "terrestre",
     porte: "medio"
 }
-*/
+
+// Tag input
 
 const input = document.getElementById("input") as HTMLInputElement;
 
@@ -31,3 +32,12 @@ input.addEventListener('input', (event) => {
     const i = event.currentTarget as HTMLInputElement;
     console.log(i.value);
 });
+*/
+
+// Generic types
+
+function adicionaApendiceALista<T>(array: T[], valor: T){
+    return array.map(() => valor);
+}
+
+adicionaApendiceALista(['A', 'B ', 'C'], 'D');
