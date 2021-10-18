@@ -46,15 +46,12 @@ adicionaApendiceALista(['A', 'B ', 'C'], 'D');
 interface IUsuario {
     id: string;
     email: string;
+    cargo?: 'gerente' | 'coordenador' | 'supervisor' | 'funcionário';
 }
 
-interface IAdmin extends IUsuario{
-    cargo: 'gerente' | 'coordenador' | 'supervisor';
-}
-
-function redirecione(usuario: IUsuario | IAdmin) {
-    if ('cargo' in usuario){
-        // redirecionar para área de administração
+function redirecione(usuario: IUsuario) {
+    if (usuario.cargo){
+        // redirecione(usuario.cargo);
     }
 
     // redirecionar para área de usuário
