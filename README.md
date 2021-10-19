@@ -9,4 +9,5 @@ Conforme sigo o curso, atualizarei este repositório com aprendizados práticos 
 2. Introdução a criação de websites com HTML5 e CSS3;
 3. https://github.com/brunacristinass/JavaScript-ES6-essencial.git (JavaScript ES6 essencial);
 4. Desenvolvimento avançado com JavaScript ES6;
-5. Introdução ao Typescript.
+5. Introdução ao Typescript;
+6. Desafio criar jogo Genius com JavaScript.
