@@ -29,10 +29,10 @@ let lightColor = (element, number) => {
     number = number * 500;
 
     setTimeout(() => {
-        element.classList.add('.selected');
+        element.classList.add('selected');
     }, number - 250);
     setTimeout(() => {
-        element.classList.remove('.selected');
+        element.classList.remove('selected');
     }, number - 250);
 
 }
@@ -41,7 +41,7 @@ let lightColor = (element, number) => {
 let checkOrder = () => {
     for (let i in clickedOrder) {
         if (clickedOrder[i] !== order[i]) {
-            lose();
+            gameOver();
             break;
         }
     }
@@ -53,12 +53,57 @@ let checkOrder = () => {
 
 // Função para o click do usuário
 let click = (color) => {
-    clickedOrder(clickedOrder.length) = color;
-    createColorElement(color).classList.add('.selected');
+    clickedOrder[clickedOrder.length] = color;
+    createColorElement(color).classList.add('selected');
 
     setTimeout(() => {
-       createColorElement(color).classList.remove('.selected'); 
-    });
-
-    checkOrder();
+       createColorElement(color).classList.remove('selected');
+       checkOrder();
+    }, 250);
 }
+
+// Função que retorna a cor
+let createColorElement = (color) => {
+    switch (color) {
+        case 0:
+            return green;
+        case 1:
+            return red;
+        case 2:
+            return yellow;
+        case 3:
+            return blue;
+        default:
+            console.log("Cor inexistente");
+            break;
+    }
+}
+
+// Função para próximo nivel do jogo
+let nextLevel = () => {
+    score += 5;
+    shuffleOrder();
+}
+
+// Função para game over
+let gameOver = () => {
+    alert(`Pontuação: ${score}\nVocê perdeu o jogo!\nClique em ok para recomeçar um novo jogo.`);
+    order = [];
+    clickedOrder = [];
+
+    startGame();
+}
+
+let startGame = () => {
+    alert(`Bem vindo ao Gênesis!\nIniciando novo jogo!`)
+    score = 0;
+
+    nextLevel();
+}
+
+green.addEventListener('click', click(0));
+red.addEventListener('click', click(1));
+yellow.addEventListener('click', click(2));
+blue.addEventListener('click', click(3));
+
+startGame();
