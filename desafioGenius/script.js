@@ -33,7 +33,7 @@ let lightColor = (element, number) => {
     }, number - 250);
     setTimeout(() => {
         element.classList.remove('selected');
-    }, number - 250);
+    }, number - 100);
 
 }
 
@@ -94,6 +94,7 @@ let gameOver = () => {
     startGame();
 }
 
+// Função de início de jogo
 let startGame = () => {
     alert(`Bem vindo ao Gênesis!\nIniciando novo jogo!`)
     score = 0;
@@ -101,9 +102,11 @@ let startGame = () => {
     nextLevel();
 }
 
-green.addEventListener('click', click(0));
-red.addEventListener('click', click(1));
-yellow.addEventListener('click', click(2));
-blue.addEventListener('click', click(3));
+// Eventos de clique para as cores
+green.onclick = () => click(0);
+red.onclick = () => click(1);
+yellow.onclick = () => click(2);
+blue.onclick = () => click(3);
 
+// Início do jogo
 startGame();
