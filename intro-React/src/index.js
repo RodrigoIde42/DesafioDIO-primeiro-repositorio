@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Button from './Button'
-import ComponentA from './ComponentA'
-import ComponentB from './ComponentB'
+//import ComponentA from './ComponentA'
+//import ComponentB from './ComponentB'
 import "./styles.css"
 
+/*
 const element = 'Digital Innovation'
 const element2 = <h1>Hello World</h1>
 
@@ -37,6 +38,43 @@ const App = () => {
             </ComponentA>
         </div>
     )
+}
+*/
+
+class App extends Component{
+
+    constructor(props){
+        super(props)
+        this.state = {
+            clock: 1000,
+            glass: 'water',
+        }
+    }
+
+    componentDidMount(){
+        window.setTimeout(() => {
+            this.setState({
+                glass: 'juice'
+            })
+        }, 3000)
+    }
+
+    glassChange = () => {
+        this.setState({
+            glass: 'soda'
+        })
+    }
+
+    render(){
+        const {clock, glass} = this.state
+
+        return(
+            <div className="App">
+                <h1>{clock}</h1>
+                <Button onClick={() => this.glassChange()} name={glass} />
+            </div>
+        )
+    }
 }
 
 const rootElement = document.getElementById("root")
