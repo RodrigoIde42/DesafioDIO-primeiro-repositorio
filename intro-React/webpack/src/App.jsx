@@ -1,32 +1,10 @@
-import React from 'react';
+import React from 'react'
+import Customers from './customers'
 
 const ButtonA = <button>Customers history</button>
 const ButtonB = <button>Sign up customer</button>
 
 const hasCustomer = true;
-
-const customer = [
-    {
-        id: 1,
-        name: 'Rodrigo Ide',
-        skills: ['React', 'Node', 'CSS', 'Webpack']
-    },
-    {
-        id: 2,
-        name: 'Juan Perez',
-        skills: ['HTML', 'React Native', 'Go', 'JS']
-    },
-    {
-        id: 3,
-        name: 'Maria Rodriguez',
-        skills: ['Assembly']
-    },
-    {
-        id: 4,
-        name: 'Pedro Martinez',
-        skills: ['Reason']
-    }
-]
 
 const App = () => {
 
@@ -96,7 +74,7 @@ const App = () => {
             {hasCustomer ? renderShowHistory : renderSignUp}
             <br/>
             <div>
-                {customer.map(renderCustomers)}
+                {Customers.map(renderCustomers)}
             </div>
             <br/>
             <input onChange={handleChange}/>
