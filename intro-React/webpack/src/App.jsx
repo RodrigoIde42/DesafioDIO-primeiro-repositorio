@@ -44,12 +44,18 @@ const App = () => {
         </div>
     )
 
+    const handleClick = (e, id) => {
+        console.log('Delete customer')
+        alert(`Customer's ID: ${id}`)
+    }
+
     const renderCustomers = (customer) => {
         if (hasCustomer) {
             return (
                 <div key={`customer-${customer.id}`}>
                     <li>
-                        {customer.name}
+                        {customer.name} 
+                        <button onClick={(e) => handleClick(e, customer.id)}>Delete customer x</button>
                     </li>
                     {customer.skills.map(renderSkills)}
                 </div>
@@ -67,6 +73,21 @@ const App = () => {
         )
     }
 
+    const name = 'Digital Innovation One'
+
+    const handleChange = (e) => {
+        const { value } = e.target;
+        console.log(value)
+    }
+
+    const showEvent = (e) => {
+        console.log('Event was clicked!!')
+        console.log(e)
+        alert(name)
+    }
+
+    const Button = <button onClick={showEvent}>Show event</button>
+
     return (
         <div>
             <h1>Digital Innovation One</h1>
@@ -75,8 +96,11 @@ const App = () => {
             {hasCustomer ? renderShowHistory : renderSignUp}
             <br/>
             <div>
-                    {customer.map(renderCustomers)}
+                {customer.map(renderCustomers)}
             </div>
+            <br/>
+            <input onChange={handleChange}/>
+            {Button}
         </div>
     );
 };
