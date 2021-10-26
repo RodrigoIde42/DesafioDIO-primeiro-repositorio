@@ -11,4 +11,5 @@ Conforme sigo o curso, atualizarei este repositório com aprendizados práticos 
 4. Desenvolvimento avançado com JavaScript ES6;
 5. Introdução ao Typescript;
 6. Desafio criar jogo Genius com JavaScript;
-7. Introdução ao ReactJS.
+7. Introdução ao ReactJS;
+8. Trabalhando com Componentes em React.
