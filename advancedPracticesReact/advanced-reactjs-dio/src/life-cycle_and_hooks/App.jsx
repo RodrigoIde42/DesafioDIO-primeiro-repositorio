@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ContextAPI from '../contextAPI/ContextAPI';
 import Twitter from './Twitter';
 
 class App extends Component {
@@ -43,6 +44,8 @@ class App extends Component {
         {this.state.activated && (
           <Twitter tweets={tweets} loading={this.state.loading}/>
         )}
+        <br />
+        <ContextAPI />
       </div>
     );
   }
