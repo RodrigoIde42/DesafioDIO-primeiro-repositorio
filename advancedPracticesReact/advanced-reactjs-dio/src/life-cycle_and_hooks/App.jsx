@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ContextAPI from '../contextAPI/ContextAPI';
 import Fragments from '../fragments/Fragments';
+import RenderProps from '../renderProps/RenderProps';
 import Twitter from './Twitter';
 
 class App extends Component {
@@ -41,7 +42,7 @@ class App extends Component {
 
     return (
       <>
-        <div style={{padding: '50px'}}>
+        <div style={{ padding: '50px' }}>
           <button onClick={this.onRemove} >Remove component</button>
           <br />
           {this.state.activated && (
@@ -51,8 +52,11 @@ class App extends Component {
         <div>
           <ContextAPI />
         </div>
-        <div style={{padding: '50px'}}>
+        <div style={{ paddingLeft: '50px' }}>
           <Fragments />
+        </div>
+        <div style={{ paddingLeft: '50px' }}>
+            <RenderProps />
         </div>
       </>
     );
