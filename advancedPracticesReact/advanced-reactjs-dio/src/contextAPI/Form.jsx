@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Input from './components/Input';
 import { ThemeContext } from './Theme';
 
 export default function Form() {
@@ -9,14 +10,17 @@ export default function Form() {
         <div>
             <h1>Form</h1>
             <form>
-                <label>Name: </label>
-                <input />
-                <label>Email: </label>
-                <input />
-                <label>Age: </label>
-                <input />
-                <label>Phone number: </label>
-                <input />
+                <table>
+                    <tbody>
+                        <Input>Name: </Input>
+                        <tr />
+                        <Input>Email: </Input>
+                        <tr />
+                        <Input>Age: </Input>
+                        <tr />
+                        <Input>Phone number: </Input>
+                    </tbody>
+                </table>
             </form>
         </div>
     )

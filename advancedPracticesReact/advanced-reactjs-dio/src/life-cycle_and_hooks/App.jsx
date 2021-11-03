@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ContextAPI from '../contextAPI/ContextAPI';
+import Fragments from '../fragments/Fragments';
 import Twitter from './Twitter';
 
 class App extends Component {
@@ -39,14 +40,21 @@ class App extends Component {
     }]
 
     return (
-      <div>
-        <button onClick={this.onRemove} >Remove component</button>
-        {this.state.activated && (
-          <Twitter tweets={tweets} loading={this.state.loading}/>
-        )}
-        <br />
-        <ContextAPI />
-      </div>
+      <>
+        <div style={{padding: '50px'}}>
+          <button onClick={this.onRemove} >Remove component</button>
+          <br />
+          {this.state.activated && (
+            <Twitter tweets={tweets} loading={this.state.loading}/>
+          )}
+        </div>
+        <div>
+          <ContextAPI />
+        </div>
+        <div style={{padding: '50px'}}>
+          <Fragments />
+        </div>
+      </>
     );
   }
 }
