@@ -1,10 +1,9 @@
 import React from 'react';
 
-export default function Column() {
+export default function Column({type}) {
     return (
         <tr>
-            <td>Sneakers</td>
-            <td>Clothes</td>
+            <td>{type.name.console}</td>
         </tr>
     )
 }
