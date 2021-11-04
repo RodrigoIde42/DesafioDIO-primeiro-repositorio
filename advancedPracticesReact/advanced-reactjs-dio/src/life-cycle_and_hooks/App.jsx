@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ContextAPI from '../contextAPI/ContextAPI';
 import Fragments from '../fragments/Fragments';
+import RefsDom from '../refs-and-dom/RefsDom';
 import RenderProps from '../renderProps/RenderProps';
 import TypeChecking from '../typeChecking/TypeChecking';
 import Twitter from './Twitter';
@@ -61,6 +62,9 @@ class App extends Component {
         </div>
         <div style={{ paddingLeft: '50px' }}>
           <TypeChecking />
+        </div>
+        <div style={{ paddingLeft: '50px' }}>
+          <RefsDom />
         </div>
       </>
     );
