@@ -8,7 +8,7 @@ export default function Card() {
     console.log('theme:values', theme);
 
     return (
-        <div style={{ paddingLeft: '50px' }}>
+        <div>
             <Form />
             <button style={{ background: theme.background, color: theme.color }}>Card Button</button>
         </div>

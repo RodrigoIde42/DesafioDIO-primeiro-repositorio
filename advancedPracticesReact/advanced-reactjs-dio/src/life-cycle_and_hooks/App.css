@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #fff;
+  background-color: rgb(37, 37, 37);
+}
+
+.app {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "LifeCycle ContextAPI Fragments"
+    "RenderProps TypeChecking RefsDom"
+    "DumbComponents nothing nothing";
+  row-gap: 5rem;
+}
+
+span {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: bold;
+}

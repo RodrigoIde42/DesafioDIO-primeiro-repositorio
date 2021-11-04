@@ -5,8 +5,10 @@ import RefsDom from '../refs-and-dom/RefsDom';
 import RenderProps from '../renderProps/RenderProps';
 import TypeChecking from '../typeChecking/TypeChecking';
 import Twitter from './Twitter';
+import './App.css';
+import DumbComponents from '../dumbComponents/DumbComponents';
 
-class App extends Component {
+export default class App extends Component {
 
   state = {
     loading: false,
@@ -43,8 +45,8 @@ class App extends Component {
     }]
 
     return (
-      <>
-        <div style={{ padding: '50px' }}>
+      <div className="app">
+        <div>
           <button onClick={this.onRemove} >Remove component</button>
           <br />
           {this.state.activated && (
@@ -54,21 +56,22 @@ class App extends Component {
         <div>
           <ContextAPI />
         </div>
-        <div style={{ paddingLeft: '50px' }}>
+        <div>
           <Fragments />
         </div>
-        <div style={{ paddingLeft: '50px' }}>
+        <div>
           <RenderProps />
         </div>
-        <div style={{ paddingLeft: '50px' }}>
+        <div>
           <TypeChecking />
         </div>
-        <div style={{ paddingLeft: '50px' }}>
+        <div>
           <RefsDom />
         </div>
-      </>
+        <div>
+          <DumbComponents />
+        </div>
+      </div>
     );
   }
 }
-
-export default App;
