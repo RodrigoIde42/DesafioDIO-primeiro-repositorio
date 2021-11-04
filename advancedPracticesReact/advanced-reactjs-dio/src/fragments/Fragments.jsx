@@ -23,9 +23,9 @@ export default function Fragments() {
         <>
             <h1>Fragments</h1>
             <table>
-
+                <tbody>
                     {store.map(renderColumns)}
-
+                </tbody>
             </table>
         </>
     )

@@ -13,11 +13,8 @@ export default function Form() {
                 <table>
                     <tbody>
                         <Input>Name: </Input>
-                        <tr />
                         <Input>Email: </Input>
-                        <tr />
                         <Input>Age: </Input>
-                        <tr />
                         <Input>Phone number: </Input>
                     </tbody>
                 </table>
