@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, memo } from 'react';
 
-export default function RefsDom() {
+export default memo(function RefsDom() {
 
     const inputRef = useRef()
     const count = useRef(1)
@@ -22,9 +22,9 @@ export default function RefsDom() {
     return (
         <>
             <h1>Count value: {count.current}</h1>
-            Focus: <input ref={inputRef} />
+            <span>Focus:</span> <input ref={inputRef} />
             <br />
             <button onClick={handleClick}>Focus</button>
         </>
     );
-}
+})

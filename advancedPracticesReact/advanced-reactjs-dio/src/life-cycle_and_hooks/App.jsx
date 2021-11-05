@@ -7,6 +7,7 @@ import TypeChecking from '../typeChecking/TypeChecking';
 import Twitter from './Twitter';
 import './App.css';
 import DumbComponents from '../dumbComponents/DumbComponents';
+import SmartComponents from '../smartComponents/SmartComponents';
 
 export default class App extends Component {
 
@@ -70,6 +71,9 @@ export default class App extends Component {
         </div>
         <div>
           <DumbComponents />
+        </div>
+        <div>
+          <SmartComponents />
         </div>
       </div>
     );

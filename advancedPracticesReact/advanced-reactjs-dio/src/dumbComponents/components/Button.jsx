@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
-export default function Button (props) {
+function Button (props) {
 
     const { children, onClick } = props
 
@@ -17,3 +17,5 @@ export default function Button (props) {
 Button.propTypes = {
     onClick: PropTypes.func.isRequired
 }
+
+export default memo(Button);

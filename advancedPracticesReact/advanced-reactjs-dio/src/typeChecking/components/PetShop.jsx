@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
-export default function PetShop (props) {
+function PetShop (props) {
 
     const { dogs, cats, customers, customerName, onClick } = props;
 
@@ -9,12 +9,14 @@ export default function PetShop (props) {
         <>
             <h2>Dogs: {dogs}</h2>
             <h3>Cats: {cats}</h3>
-            <div>
+            <span>
                 Customers quantity: {customers}
-            </div>
-            <div>
+            </span>
+            <br />
+            <span>
                 Customer name: {customerName}
-            </div>
+            </span>
+            <br />
             <button onClick={onClick}>Start bath</button>
         </>
     );
@@ -33,3 +35,5 @@ PetShop.propTypes = {
     onClick: PropTypes.func.isRequired,
     status: PropTypes.oneOf(['Completed', 'Disabled']),
 }
+
+export default memo(PetShop);

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import Button from './components/Button';
 import Calc from './components/Calc';
 
-export default function DumbComponents() {
+export default memo(function DumbComponents() {
 
     const [value, setValue] = useState(0)
     const [min, setMin] = useState(0)
@@ -41,4 +41,4 @@ export default function DumbComponents() {
             </div>
         </>
     )
-}
+})

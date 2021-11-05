@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PetShop from './components/PetShop';
 
-export default function TypeChecking() {
+export default memo(function TypeChecking() {
 
     const handleClick = () => {
         console.log('Starting bath...');
@@ -18,4 +18,4 @@ export default function TypeChecking() {
             />
         </>
     )
-}
+})

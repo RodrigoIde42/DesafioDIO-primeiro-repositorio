@@ -35,10 +35,10 @@ function Twitter(props) {
     console.log('new tweet >> ', tweet);
 
     return (
-        <div>
+        <>
             <button onClick={handleTweet}>Re-render</button>
             Test
-        </div>
+        </>
     )
 }
 

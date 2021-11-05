@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropType from 'prop-types';
 
-export default function Calc (props) {
+function Calc (props) {
 
     const { min, max, onChange } = props  
 
@@ -21,3 +21,5 @@ Calc.propTypes = {
     max: PropType.number.isRequired,
     onChange: PropType.func.isRequired
 }
+
+export default memo(Calc);

@@ -7,7 +7,7 @@ export default function Form() {
     const context = useContext(ThemeContext);
 
     const renderForm = (
-        <div>
+        <>
             <h1>Form</h1>
             <form>
                 <table>
@@ -19,7 +19,7 @@ export default function Form() {
                     </tbody>
                 </table>
             </form>
-        </div>
+        </>
     )
 
     const renderNotLogged = (
@@ -27,8 +27,8 @@ export default function Form() {
     )
 
     return (
-        <div>
+        <>
             {context.token ? renderForm : renderNotLogged}
-        </div>
+        </>
     )
 }

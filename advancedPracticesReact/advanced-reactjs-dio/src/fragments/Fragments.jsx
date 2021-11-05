@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, memo } from 'react';
 import Column from './components/Column';
 
 const store = [{
@@ -11,7 +11,7 @@ const store = [{
     type: 'T-shirt'
 }]
 
-export default function Fragments() {
+export default memo(function Fragments() {
 
     const renderColumns = (element, key) => (
         <Fragment key={`column-${key}`}>
@@ -29,4 +29,4 @@ export default function Fragments() {
             </table>
         </>
     )
-}
+})

@@ -14,12 +14,32 @@ body {
   grid-template-areas:
     "LifeCycle ContextAPI Fragments"
     "RenderProps TypeChecking RefsDom"
-    "DumbComponents nothing nothing";
-  row-gap: 5rem;
+    "DumbComponents SmartComponents nothing";
+  row-gap: 4rem;
 }
 
 span {
   color: #fff;
   font-size: 1.05rem;
   font-weight: bold;
+}
+
+.gallery {
+  display: grid;
+  grid-template-areas:
+    "image"
+    "button";
+}
+
+button {
+  width: 10rem;
+  height: 1.5rem;
+  background-color: rgb(94, 142, 170);
+  border: 1px solid rgb(0, 50, 78);
+  border-radius: 5px;
+}
+
+button:active {
+  background-color: rgb(0, 50, 78);
+  color: rgb(94, 142, 170);
 }

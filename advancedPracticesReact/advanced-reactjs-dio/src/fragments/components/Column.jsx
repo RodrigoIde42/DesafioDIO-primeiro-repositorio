@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-export default function Column({type}) {
+export default memo(function Column({type}) {
     return (
         <tr>
             <td>{type}</td>
         </tr>
     )
-}
+})
