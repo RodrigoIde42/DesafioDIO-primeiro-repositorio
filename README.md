@@ -13,4 +13,5 @@ Conforme sigo o curso, atualizarei este repositório com aprendizados práticos 
 6. Desafio criar jogo Genius com JavaScript;
 7. Introdução ao ReactJS;
 8. Trabalhando com Componentes em React;
-9. https://github.com/eduardogc/digital-one-react-intermediario (Desenvolvimento de aplicações para Internet com ReactJS).
+9. https://github.com/eduardogc/digital-one-react-intermediario (Desenvolvimento de aplicações para Internet com ReactJS);
+10. Práticas avançadas em projetos com ReactJS.
