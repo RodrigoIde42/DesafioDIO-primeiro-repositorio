@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import Quotes from '../components/Quotes/Quotes';
 import chopperImg from '../images/chopper.png';
 
+import Quotes from '../components/Quotes/Quotes';
+import { getQuotes } from '../services/QuotesService/QuotesService';
+
 export default function App() {
+
+  const [quotes, setQuotes] = useState({ quote: 'quote', author: 'random author' });
+
+  const onUpdate = async () => {
+    const quote = await getQuotes();
+    setQuotes(quote);
+  }
+
   return (
     <Content>
-      <Quotes quote='quote' author='random author' />
+      <Quotes {...quotes} onUpdate={onUpdate} />
       <ChopperImg src={chopperImg} alt='Chopper!!' />
     </Content>
   )
@@ -22,5 +32,6 @@ const Content = styled.div`
 
 const ChopperImg = styled.img`
   max-width: 50vw;
+  max-height: 80vh;
   align-self: flex-end;
 `
