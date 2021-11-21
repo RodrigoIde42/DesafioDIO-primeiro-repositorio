@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Button, Text, SafeAreaView, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, SafeAreaView, TouchableOpacity, StyleSheet } from 'react-native';
+import NavigateButton from './components/NavigateButton';
 
-const RandomNumber = () => {
+const RandomNumber = ({ navigation }) => {
 
     const [number, setNumber] = useState(0);
 
@@ -29,11 +30,12 @@ const RandomNumber = () => {
             >
                 <Text>Reset</Text>
             </TouchableOpacity>
-            <Button
-                style={Style.button}
-                title="Return to Résume"
-                onPress={() => props.navigation.navigate('Resume')}
-            />
+            
+            <NavigateButton
+                onPress={() => navigation.navigate('Resume')}
+            >
+                <Text>Go to Résume</Text>
+            </NavigateButton>
         </SafeAreaView>
     )
 }
