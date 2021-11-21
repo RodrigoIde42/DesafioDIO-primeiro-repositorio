@@ -15,4 +15,5 @@ Conforme sigo o curso, atualizarei este repositório com aprendizados práticos 
 8. Trabalhando com Componentes em React;
 9. https://github.com/eduardogc/digital-one-react-intermediario (Desenvolvimento de aplicações para Internet com ReactJS);
 10. Práticas avançadas em projetos com ReactJS;
-11. Introdução aos React Hooks.
+11. Introdução aos React Hooks;
+12. Criando aplicações móveis multiplataforma com React Native.
