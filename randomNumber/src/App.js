@@ -1,60 +1,21 @@
-import React, { useState } from 'react';
-import { Text, SafeAreaView, TouchableOpacity, StyleSheet } from 'react-native';
+import 'react-native-gesture-handler';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import RandomNumber from './RandomNumber';
+import Resume from './Resume';
+
+const Stack = createStackNavigator();
 
 const App = () => {
-
-  const [number, setNumber] = useState(0);
-
-  function handleNumber() {
-    const newNumber = Math.floor(Math.random() * 100);
-    setNumber(newNumber);
-  }
-
-  function handleReset() {
-    setNumber(0);
-  }
-
   return (
-    <SafeAreaView style={Style.container}>
-      <Text style={Style.number}>{number}</Text>
-      <TouchableOpacity 
-        style={Style.button}
-        onPress={handleNumber}
-      >
-        <Text>Generate number</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={Style.button}
-        onPress={handleReset}
-      >
-        <Text>Reset</Text>
-      </TouchableOpacity>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Resume" component={Resume} />
+        <Stack.Screen name="Random Number" component={RandomNumber} />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
-
-const Style = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#20A5FF',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  number: {
-    fontSize: 35,
-    color: '#FFFFFF',
-    fontWeight: 'bold'
-  },
-  button: {
-    backgroundColor: '#FFFFFF',
-    width: '80%',
-    paddingHorizontal: 5,
-    paddingVertical: 10,
-    borderRadius: 5,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 10
-  }
-})
 
 export default App;
