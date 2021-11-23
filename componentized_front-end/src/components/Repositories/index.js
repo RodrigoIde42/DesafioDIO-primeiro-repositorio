@@ -1,4 +1,5 @@
 import React from 'react';
+import RepositoryItem from '../RepositoryItem';
 import * as S from './styled';
 
 export default function Repositories() {
@@ -11,8 +12,20 @@ export default function Repositories() {
                 <S.WrapperTab>Repositories</S.WrapperTab>
                 <S.WrapperTab>Starred</S.WrapperTab>
             </S.WrapperTabList>
-            <S.WrapperTabPanel>panel Repositories</S.WrapperTabPanel>
-            <S.WrapperTabPanel>panel Starred</S.WrapperTabPanel>
+            <S.WrapperTabPanel>
+                <RepositoryItem 
+                  name="DesafiosDIO"
+                  fullname="RodrigoIde42/DesafiosDIO" 
+                  linkToRepo="https://github.com/RodrigoIde42/DesafiosDIO" 
+                />
+            </S.WrapperTabPanel>
+            <S.WrapperTabPanel>
+                <RepositoryItem 
+                  name="livro-receitas"
+                  fullname="RodrigoIde42/livro-receitas"
+                  linkToRepo="https://github.com/RodrigoIde42/livro-receitas"
+                />
+            </S.WrapperTabPanel>
         </S.WrapperTabs>
     )
 }
