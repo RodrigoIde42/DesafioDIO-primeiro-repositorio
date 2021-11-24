@@ -1,17 +1,18 @@
 import React from 'react';
+import * as S from './styled';
 
 export default function RepositoryItem({name, fullname, linkToRepo}) {
     return (
-        <div>
-            <h2>{name}</h2>
-            <h4>Full name:</h4>
-            <a
+        <S.Wrapper>
+            <S.WrapperTitle>{name}</S.WrapperTitle>
+            <S.WrapperFullName>Full name:</S.WrapperFullName>
+            <S.WrapperLink
               href={linkToRepo}
               target="_blank"
               rel="noreferrer"
             >
                 {fullname}
-            </a>
-        </div>
+            </S.WrapperLink>
+        </S.Wrapper>
     )
 }

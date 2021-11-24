@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from './components/Layout';
+import NoUserSearched from './components/NoUserSearched';
 import Profile from './components/Profile';
 import Repositories from './components/Repositories';
 import { useGithub } from './hooks/GithubHooks';
@@ -21,7 +22,7 @@ function App() {
           </>
         )}
       </> :
-        <p>No user searched</p>
+        <NoUserSearched />
       }
     </Layout>
   );
