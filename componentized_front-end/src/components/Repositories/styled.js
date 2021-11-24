@@ -38,7 +38,7 @@ WrapperTabs.tabsRole = "Tab";
 
 export const WrapperTabPanel = styled(TabPanel)`
     display: none;
-    min-height: 55vh;
+    min-height: 50vh;
     padding: 16px;
     margin: -5px 8px;
     border: 1px solid #EFDE80;

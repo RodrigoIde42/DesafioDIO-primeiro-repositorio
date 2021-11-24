@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
     width: 100%;
     justify-content: space-between;
     padding: 4px;
+    margin: 16px 0;
 
     input {
         width: 100%;

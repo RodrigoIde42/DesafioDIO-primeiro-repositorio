@@ -5,7 +5,11 @@ import * as S from './styled';
 export default function Header() {
 
     const { getUser } = useGithub();
-    const { username, setUsername } = useState();
+    const [ username, setUsername ] = useState();
+
+    const handleSetUsername = (e) => {
+        setUsername(e.target.value);
+    }
 
     const submitGetUser = () => {
         if (!username) return;
@@ -18,9 +22,14 @@ export default function Header() {
                 <input 
                   type="text" 
                   placeholder="Type username to search" 
-                  onChange={submitGetUser}
+                  onChange={handleSetUsername}
                 />
-                <button type="submit"><span>Search</span></button>
+                <button 
+                  type="submit"
+                  onClick={submitGetUser}
+                >
+                    <span>Search</span>
+                </button>
             </S.Wrapper>
         </header>
     )

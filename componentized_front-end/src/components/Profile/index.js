@@ -1,5 +1,6 @@
 import React from 'react'
 import { useGithub } from '../../hooks/GithubHooks'
+import WrapperUserGeneric from '../WrapperUserGeneric';
 import * as S from './styled'
 
 export default function Profile() {
@@ -24,6 +25,30 @@ export default function Profile() {
                         {githubState.user.login}
                     </a>
                 </S.WrapperUsername>
+                {
+                    githubState.user.company && (
+                        <WrapperUserGeneric h3Value="Company:" info={githubState.user.company} />
+                    )
+                }
+                {
+                    githubState.user.location && (
+                        <WrapperUserGeneric h3Value="Location:" info={githubState.user.location} />
+                    )
+                }
+                {
+                    githubState.user.blog && (
+                        <S.WrapperUsername>
+                            <h3>Blog:</h3>
+                            <a
+                              href={githubState.user.blog}
+                              target="_blank"
+                              rel="noreferrer" 
+                            >
+                                {githubState.user.blog}
+                            </a>
+                        </S.WrapperUsername>
+                    )
+                }
                 <S.WrapperStatusCount>
                     <div>
                         <h4>Followers: </h4>

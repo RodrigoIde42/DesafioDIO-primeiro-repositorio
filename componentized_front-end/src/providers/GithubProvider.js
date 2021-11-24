@@ -11,6 +11,7 @@ export const GithubContext = createContext({
 export default function GithubProvider({ children }) {
 
     const [githubState, setGithubState] = useState({
+        hasUser: false,
         loading: false,
         user: {
             login: undefined,
@@ -31,24 +32,32 @@ export default function GithubProvider({ children }) {
     });
 
     const getUser = (username) => {
-        api.get(`users/${username}`).then(({ data: { user } }) => {
+        setGithubState(prevState => ({
+            ...prevState,
+            loading: !prevState.loading
+        }))
+        api.get(`users/${username}`).then(({ data }) => {
             setGithubState(prevState => ({
-                ...prevState, 
+                ...prevState,
+                hasUser: true,
                 user: {
-                    login: user.login,
-                    name: user.name,
-                    htmlUrl: user.html_url,
-                    blog: user.blog,
-                    bio: user.bio,
-                    location: user.location,
-                    company: user.company,
-                    avatarUrl: user.avatar_url,
-                    followers: user.followers,
-                    following: user.following,
-                    publicGists: user.public_gists,
-                    publicRepos: user.public_repos,
-                },
-                loading: false,
+                    login: data.login,
+                    name: data.name,
+                    htmlUrl: data.html_url,
+                    blog: data.blog,
+                    location: data.location,
+                    company: data.company,
+                    avatarUrl: data.avatar_url,
+                    followers: data.followers,
+                    following: data.following,
+                    publicGists: data.public_gists,
+                    publicRepos: data.public_repos,
+                }
+            }));
+        }).finally(() => {
+            setGithubState(prevState => ({
+                ...prevState,
+                loading: !prevState.loading
             }))
         })
     }
